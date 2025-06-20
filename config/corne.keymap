@@ -31,6 +31,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <1 2>;
         };
+
+        cb_left {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <14 13>;
+        };
+
+        cb_right {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <21 22>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
