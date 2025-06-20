@@ -22,14 +22,14 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_delete {
-            bindings = <&kp DELETE>;
-            key-positions = <21 22>;
-        };
-
         to_symbol {
             bindings = <&to 2>;
             key-positions = <36 41>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <1 2>;
         };
     };
 
@@ -43,7 +43,7 @@
 &trans  &kp Q           &kp W           &kp E        &kp R                        &kp T                 &kp Y        &kp U                 &kp I                    &kp O                 &kp P               &trans
 &trans  &kp A           &kp S           &kp D        &kp F                        &kp G                 &kp H        &kp J                 &kp K                    &kp L                 &kp SEMICOLON       &trans
 &trans  &mt LEFT_WIN Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT V             &kp B                 &kp N        &mt RIGHT_SHIFT M     &mt RIGHT_CONTROL COMMA  &mt RIGHT_ALT PERIOD  &mt LEFT_WIN SLASH  &trans
-                                        &kp ESCAPE   &mt LC(BACKSPACE) BACKSPACE  &mt LEFT_SHIFT TAB    &mt H ENTER  &mt LEFT_SHIFT SPACE  &to 1
+                                        &kp DEL      &mt LC(BACKSPACE) BACKSPACE  &mt LEFT_SHIFT TAB    &mt H ENTER  &mt LEFT_SHIFT SPACE  &to 1
             >;
         };
 
@@ -51,17 +51,17 @@
             bindings = <
 &trans  &kp LEFT_BRACKET  &kp N7        &kp N8        &kp N9        &kp RIGHT_BRACKET    &kp LC(Y)  &kp LC(V)        &kp LC(C)      &kp LC(X)      &kp LC(Z)  &trans
 &trans  &kp SEMICOLON     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp EQUAL            &kp LEFT   &kp DOWN         &kp UP         &kp RIGHT      &to 3      &trans
-&trans  &kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0         &kp CAPS   &kp RIGHT_SHIFT  &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans
+&trans  &kp DOT           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0         &kp CAPS   &kp RIGHT_SHIFT  &kp RIGHT_WIN  &kp RIGHT_ALT  &kp RCTRL  &trans
                                         &to 0         &trans        &trans               &trans     &trans           &to 2
             >;
         };
 
         symbol {
             bindings = <
-&trans  &kp EXCLAMATION    &kp AT_SIGN       &kp HASH   &kp DOLLAR     &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &kp LEFT_BRACE     &kp LEFT_BRACKET  &trans     &trans         &kp PIPE       &kp MINUS       &kp PLUS       &trans           &kp RIGHT_BRACKET     &kp RIGHT_BRACE        &trans
-&trans  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE  &kp BACKSLASH  &kp FSLH       &kp UNDERSCORE  &kp EQUAL      &kp RIGHT_SHIFT  &kp RIGHT_ALT         &kp RCTRL              &trans
-                                             &to 0      &trans         &trans         &trans          &trans         &to 4
+&trans  &kp EXCLAMATION    &kp AT_SIGN       &kp HASH       &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPERSAND  &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans  &kp LEFT_BRACE     &kp LEFT_BRACKET  &kp BACKSLASH  &kp PIPE    &kp SLASH      &kp MINUS       &kp EQUAL      &kp TILDE        &kp RIGHT_BRACKET     &kp RIGHT_BRACE        &trans
+&trans  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE      &kp COMMA   &kp PERIOD     &kp UNDERSCORE  &kp PLUS       &kp RIGHT_SHIFT  &kp RIGHT_ALT         &kp RCTRL              &trans
+                                             &to 0          &trans      &trans         &trans          &trans         &to 4
             >;
         };
 
