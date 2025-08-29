@@ -61,23 +61,35 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <30 31>;
         };
+
+        passlaptop {
+            bindings = <&newpass>;
+            key-positions = <19 8 21 22>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
-        new_macro: new_macro {
+        passold: passold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(P) &kp LS(O) &kp LS(I) &kp LS(U) &kp Q &kp W &kp E &kp R &kp N1 &kp N2 &kp N3 &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            label = "passold";
+        };
+
+        passdev: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6>;
             label = "NEW_MACRO";
         };
 
-        new_macro2: new_macro2 {
+        newpass: newpass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp H &kp U &kp T &kp B &kp U &kp N &kp N0 &kp N1>;
-            label = "NEW_MACRO2";
+            bindings = <&kp P &kp O &kp I &kp U &kp LS(Q) &kp LS(W) &kp LS(E) &kp LS(R) &kp N1 &kp N2 &kp N3 &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            label = "NEWPASS";
         };
     };
 
@@ -122,10 +134,10 @@
 
         sys_layer {
             bindings = <
-&trans  &trans        &trans        &bt BT_PRV    &bt BT_NXT    &trans            &new_macro  &new_macro2  &trans  &trans  &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans      &none        &none   &none   &none   &trans
-&trans  &bootloader   &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none       &trans       &trans  &trans  &trans  &trans
-                                    &to 0         &trans        &trans            &trans      &trans       &trans
+&trans  &trans        &trans        &bt BT_PRV    &bt BT_NXT    &trans            &passold  &passdev  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans    &none     &none   &none   &none   &trans
+&trans  &bootloader   &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none     &trans    &trans  &trans  &trans  &trans
+                                    &to 0         &trans        &trans            &trans    &trans    &trans
             >;
         };
     };
