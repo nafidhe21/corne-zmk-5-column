@@ -71,10 +71,10 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
-        passold: passold {
+        passcsa: passold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(P) &kp LS(O) &kp LS(I) &kp LS(U) &kp Q &kp W &kp E &kp R &kp N1 &kp N2 &kp N3 &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            bindings = <&kp LS(C) &kp S &kp AT &kp LS(G) &kp N0 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp EXCL>;
             label = "passold";
         };
 
@@ -134,7 +134,7 @@
 
         sys_layer {
             bindings = <
-&trans  &trans        &trans        &bt BT_PRV    &bt BT_NXT    &trans            &passold  &passdev  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &bt BT_PRV    &bt BT_NXT    &trans            &passcsa  &passdev  &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &trans    &none     &none   &none   &none   &trans
 &trans  &bootloader   &sys_reset    &none         &bt BT_CLR    &bt BT_CLR_ALL    &none     &trans    &trans  &trans  &trans  &trans
                                     &to 0         &trans        &trans            &trans    &trans    &trans
