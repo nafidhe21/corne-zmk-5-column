@@ -88,7 +88,7 @@
         newpass: newpass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp P &kp O &kp I &kp U &kp LS(Q) &kp LS(W) &kp LS(E) &kp LS(R) &kp N1 &kp N2 &kp N3 &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            bindings = <&kp LS(I) &kp LS(U) &kp LS(I) &kp LS(U) &kp E &kp R &kp E &kp R &kp N1 &kp N2 &kp N3 &kp N1 &kp N2 &kp N3 &kp EXCL>;
             label = "NEWPASS";
         };
     };
