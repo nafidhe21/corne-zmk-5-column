@@ -146,18 +146,18 @@
 
         one_shot {
             bindings = <
-&kp ESCAPE  &trans          &trans  &trans  &trans  &trans    &kp CARET         &kp AMPERSAND         &kp ASTERISK           &kp SEMICOLON      &trans  &trans
-&kp TAB     &kp UNDERSCORE  &trans  &trans  &trans  &trans    &trans            &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans             &trans  &trans
-&kp TILDE   &trans          &trans  &trans  &trans  &trans    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &trans  &trans
-                                    &trans  &trans  &trans    &trans            &trans                &to 2
+&none  &kp ESCAPE  &kp AT_SIGN     &kp HASH  &kp DOLLAR       &kp PERCENT          &kp CARET         &kp AMPERSAND         &kp ASTERISK           &kp SEMICOLON      &kp COLON  &trans
+&none  &kp TAB     &kp MINUS       &trans    &trans           &kp SINGLE_QUOTE     &kp BACKSLASH     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE           &kp ENTER  &trans
+&none  &kp TILDE   &kp UNDERSCORE  &trans    &kp EXCLAMATION  &kp DOUBLE_QUOTES    &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &to 3      &trans
+                                   &trans    &trans           &trans               &trans            &trans                &to 2
             >;
         };
 
         num {
             bindings = <
-&trans  &kp ESC  &kp C_PLAY  &kp C_PREV            &kp C_NEXT    &kp MINUS     &kp MINUS  &kp N7  &kp N8  &kp N9  &trans     &trans
-&trans  &kp TAB  &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP  &kp PLUS      &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp ENTER  &trans
-&trans  &to 4    &kp STAR    &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP  &kp PERIOD    &kp N0     &kp N1  &kp N2  &kp N3  &trans     &trans
+&trans  &kp ESC  &kp C_PLAY  &kp C_PREV            &kp C_NEXT    &kp MINUS     &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BACKSPACE  &trans
+&trans  &kp TAB  &kp K_MUTE  &kp C_VOL_DN          &kp C_VOL_UP  &kp PLUS      &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp ENTER      &trans
+&trans  &to 4    &kp STAR    &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP  &kp PERIOD    &kp N0     &kp N1  &kp N2  &kp N3  &trans         &trans
                              &to 0                 &kp LEFT_WIN  &trans        &trans     &trans  &trans
             >;
         };
