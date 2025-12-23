@@ -128,9 +128,30 @@
             bindings = <&mo 4>;
             key-positions = <36 37>;
         };
+
+        devpass1 {
+            bindings = <&devpass1>;
+            key-positions = <19 8 21 22>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
+
+    macros {
+        devpass1: pass {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(I) &kp LS(U) &kp LS(I) &kp LS(U) &kp E &kp R &kp E &kp R &kp N1 &kp N2 &kp N3 &kp N1 &kp N2 &kp N3 &kp EXCL>;
+            label = "PASS";
+        };
+
+        devpass2: devpass2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(C) &kp S &kp AT &kp LS(G) &kp N0 &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp EXCL>;
+            label = "DEVPASS2";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
