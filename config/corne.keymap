@@ -23,7 +23,7 @@
 
 &lt { tapping-term-ms = <400>; };
 
-&sl { release-after-ms = <2500>; };
+&sl { release-after-ms = <2500>; ignore-modifiers; };
 
 / {
     combos {
